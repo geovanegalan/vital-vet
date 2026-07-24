@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+		/>
+
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: "#005E82",
+							dark: "#12134F",
+							accent: "#7781E8",
+							light: "#81E8FF",
+							background: "#ECEEFF",
+						},
+					},
+				},
+			};
+		</script>
+		<link rel="stylesheet" href="../css/global.css" />
+	</head>
+	<body
+		class="bg-background h-screen w-screen flex justify-center items-center bg-gradient-to-b from-background to-dark"
+	>
+		<main class="container bg-accent/50 rounded-lg p-10 h-3/4 w-2/4">
+			<h1 class="text-4xl font-bold flex items-center gap-3 flex-wrap">
+				Insira os dados do paciente
+				<span class="material-symbols-outlined"> pets </span>
+			</h1>
+
+			<form
+				id="form-pet"
+				novalidate
+				class="my-5 grid grid-cols-1 md:grid-cols-4 gap-4"
+			>
+				<div class="col-span-1 md:col-span-2">
+					<label for="cpf">CPF do Dono</label>
+
+					<div
+						class="flex overflow-hidden rounded-lg border border-light shadow-sm focus-within:ring-2 focus-within:ring-primary"
+					>
+						<input
+							type="text"
+							name="cpf"
+							id="cpf"
+							placeholder="000.000.000-00"
+							required
+							pattern="^\d{3}\.\d{3}\.\d{3}-\d{2}$"
+							title="Digite o CPF no formato 000.000.000-00"
+							maxlength="14"
+							inputmode="numeric"
+							class="flex-1 px-4 py-2 focus:outline-none"
+						/>
+
+						<button
+							type="button"
+							id="search-owner"
+							class="flex items-center gap-2 bg-primary px-4 text-white transition hover:bg-dark"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+								stroke="currentColor"
+								class="h-5 w-5"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="m21 21-4.35-4.35m1.85-5.15a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+								/>
+							</svg>
+
+							<span class="hidden sm:inline">Buscar</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="col-span-1 md:col-span-2">
+					<label for="name">Nome</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Ex.: João Carlos"
+						required
+						pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)+$"
+						title="Digite seu nome completo"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-2">
+					<label for="endereco">Endereco</label>
+
+					<input
+						type="text"
+						name="endereco"
+						id="endereco"
+						placeholder="Rua das Flores, 123 - Primavera"
+						required
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-2">
+					<label for="telefone">Telefone</label>
+
+					<input
+						type="text"
+						name="telefone"
+						id="tel"
+						placeholder="(00) 91234-5678"
+						required
+						pattern="^\(\d{2}\) \d{4,5}-\d{4}$"
+						title="Digite um telefone válido"
+						maxlength="15"
+						inputmode="tel"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-2">
+					<label for="pet-name">Nome do pet</label>
+					<input
+						type="text"
+						name="pet-name"
+						id="pet-name"
+						placeholder="Ex.: Rex"
+						required
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-1 py-0.5">
+					<label for="species">Espécie</label>
+					<select
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+						id="species"
+						name="species"
+						required
+					>
+						<option value="">Selecione</option>
+						<option value="dog">Canina</option>
+						<option value="cat">Felina</option>
+						<option value="bird">Ave</option>
+						<option value="other">Outros</option>
+					</select>
+				</div>
+
+				<div class="col-span-1 md:col-span-1">
+					<label for="raca">Raça</label>
+					<input
+						type="text"
+						name="raca"
+						id="raca"
+						placeholder="Poodle"
+						required
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-1">
+					<label for="age">Idade</label>
+					<input
+						type="text"
+						name="age"
+						id="age"
+						placeholder="Ex.: 1"
+						required
+						inputmode="numeric"
+						pattern="\d*"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-1">
+					<label for="weigth">Peso</label>
+					<input
+						type="text"
+						name="weigth"
+						id="weigth"
+						placeholder="Ex.: 5.3"
+						required
+						inputmode="numeric"
+						pattern="[0-9.]*"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					/>
+				</div>
+
+				<div class="col-span-1 md:col-span-1 py-0.5">
+					<label for="sex">Sexo</label>
+					<select
+						name="sex"
+						id="sex"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					>
+						<option value="">-</option>
+						<option value="fem">F</option>
+						<option value="masc">M</option>
+						<option value="n-sabe">Não sabe</option>
+					</select>
+				</div>
+
+				<div class="col-span-1 md:col-span-1 py-0.5">
+					<label for="castrado">Animal castrado</label>
+					<select
+						name="castrado"
+						id="castrado"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					>
+						<option value="">-</option>
+						<option value="sim">Sim</option>
+						<option value="nao">Não</option>
+						<option value="n-s">Não sabe</option>
+					</select>
+				</div>
+
+				<div class="col-span-1 md:col-span-4">
+					<label for="observations">Observações</label>
+					<textarea
+						rows="5"
+						name="observations"
+						id="observations"
+						class="w-full px-4 py-2 border border-light rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+					>
+					</textarea>
+				</div>
+
+				<div class="col-span-1 md:col-span-4 flex justify-end gap-3 mt-4">
+					<button
+						type="reset"
+						class="bg-background rounded-md p-3 w-full md:w-1/4"
+					>
+						Limpar
+					</button>
+
+					<button
+						type="submit"
+						class="bg-primary text-white font-bold rounded-md p-3 w-full md:w-1/4"
+					>
+						Salvar
+					</button>
+				</div>
+			</form>
+		</main>
+
+		<!--  Bibliotecas externas -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+		<!--  Utilitários -->
+		<script src="../js/utils/api.js"></script>
+		<script src="../js/utils/sanitize.js"></script>
+		<script src="../js/utils/formErrors.js"></script>
+
+		<!--Services-->
+
+		<!-- Proteção de rota -->
+		<script src="../js/auth-guard.js"></script>
+
+		<!-- Script específico da página -->
+	</body>
+</html>
