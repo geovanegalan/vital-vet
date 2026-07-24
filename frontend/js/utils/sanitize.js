@@ -10,7 +10,7 @@ function validateCPF(cpf) {
 
 		let digit = sum % 11 < 2 ? 0 : 11 - (sum % 11);
 
-		if (digit !== digits[length]) return false; // ✅ agora sai da função!
+		if (digit !== digits[length]) return false;
 	}
 
 	return true;
