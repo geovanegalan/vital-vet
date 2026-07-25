@@ -1,6 +1,6 @@
 ### Buscar todos os owners
-GET http://localhost:3000/owners
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQzODg5NzIsImV4cCI6MTc4NDM5OTc3Mn0.3ZSgGMX446cSYHIX4T-n5YAk3c40v2M0Bq3c1SUj6u0
+GET http://localhost:3000/owners/cpf/12345678900
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3ODQ5MzMxNjQsImV4cCI6MTc4NDk0Mzk2NH0.6YHjyNHC9Z-Bxt8gk3njIH6dXUyVDrZSRWCq0P0UwxA
 Content-Type: application/json
 
 ###
@@ -20,3 +20,5 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/appointments/2
+
+
