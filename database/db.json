@@ -1,152 +1,152 @@
 {
-  "users": [
-    {
-      "id": "1",
-      "name": "Juma Beatriz",
-      "emai": "jumamad@vitalvet.com",
-      "userName": "jumamad",
-      "password": "$2b$10$qm5BkeOk3l5ZKgtEB26zQeGe0Rhb/mqvQCVPpovLa3idk3WYOfMAy",
-      "role": "admin"
-    }
-  ],
-  "owners": [
-    {
-      "id": "1",
-      "name": "João Silva",
-      "cpf": "12345678900",
-      "tel": "41999990001",
-      "email": "joao@email.com",
-      "address": "Rua das Flores, 123",
-      "createdAt": "2024-01-15T10:00:00.000Z"
-    },
-    {
-      "name": "Maria Freitas",
-      "cpf": "11345545912",
-      "tel": "41999991231",
-      "email": "maria@email.com",
-      "address": "Rua das Orquideas, 1011",
-      "createdAt": "2026-07-15T22:06:29.819Z",
-      "id": "xPwq_G2"
-    },
-    {
-      "name": "Manoel Junior",
-      "cpf": "33223947000",
-      "email": "manoeljuninhoepstein@gmail.com",
-      "address": "Rua do Epstein, 6969 - Ilha",
-      "createdAt": "2026-07-25T00:03:38.306Z",
-      "id": "S_5gPF1"
-    },
-    {
-      "name": "Carlos jose",
-      "cpf": "21141896001",
-      "tel": "12398190382",
-      "email": "juca@gmail.com",
-      "address": "Rua Vereador Joel Vicentin, 233 - Primavera",
-      "createdAt": "2026-07-25T00:06:18.137Z",
-      "id": "bBPYhPM"
-    }
-  ],
-  "pets": [
-    {
-      "id": "1",
-      "nome": "Rex",
-      "especie": "Cachorro",
-      "raca": "Labrador",
-      "idade": 3,
-      "peso": 28.5,
-      "sexo": "M",
-      "idDono": "1"
-    },
-    {
-      "nome": "Lurdinha",
-      "especie": "Gato",
-      "raca": "Sem Raça",
-      "idade": 3,
-      "peso": 6,
-      "sexo": "F",
-      "idDono": "xPwq_G2",
-      "id": "i_AbpQP"
-    },
-    {
-      "petName": "Tirivo",
-      "petSpecie": "bird",
-      "petBreed": "Tiriva",
-      "petAge": "2",
-      "petWeight": "1",
-      "petGenre": "fem",
-      "petSpayed": "n-s",
-      "obs": "Uma tiriva bem humilde",
-      "ownerId": "1",
-      "id": "Nom3mRK"
-    }
-  ],
-  "appointments": [
-    {
-      "idAnimal": "1",
-      "idDono": "1",
-      "dataHora": "2025-03-01T14:00:00.000Z",
-      "tipoExame": "Coleta",
-      "status": "realizado",
-      "observacoesIniciais": "Animal brabo",
-      "protocol": "1000",
-      "id": 1
-    },
-    {
-      "idAnimal": "1",
-      "idDono": "1",
-      "dataHora": "2025-03-01T14:00:00.000Z",
-      "tipoExame": "Coleta",
-      "status": "realizado",
-      "observacoesIniciais": "Animal brabo 2",
-      "protocol": "1001",
-      "id": 2,
-      "cancelReason": {
-        "cancelReason": "Dono viajou!"
-      }
-    },
-    {
-      "idAnimal": "1",
-      "idDono": "1",
-      "dataHora": "2025-03-01T14:00:00.000Z",
-      "tipoExame": "Coleta",
-      "status": "realizado",
-      "observacoesIniciais": "Animal brabo 2",
-      "protocol": "1002",
-      "id": 3,
-      "cancelReason": "Dono viajou!"
-    }
-  ],
-  "exams": [
-    {
-      "id": "1",
-      "idAgendamento": "1",
-      "idAnimal": "1",
-      "idVeterinario": "vet-001",
-      "dataHoraInicio": "2024-02-01T14:05:00.000Z",
-      "dataHoraFim": "2024-02-01T14:30:00.000Z",
-      "resultado": "Todos os índices normais",
-      "observacoes": "Animal colaborativo durante coleta",
-      "status": "concluído"
-    }
-  ],
-  "stocks": [
-    {
-      "id": "1",
-      "nomeMaterial": "Seringa 5ml",
-      "quantidadeAtual": 50,
-      "quantidadeMinima": 10,
-      "unidade": "unidade"
-    }
-  ],
-  "stockMovements": [
-    {
-      "id": "1",
-      "idMaterial": "1",
-      "idExame": "1",
-      "tipo": "saída",
-      "quantidade": 2,
-      "motivo": "Coleta de sangue - Hemograma",
-      "data": "2024-02-01T14:05:00.000Z"
-    }
-  ]
+	"users": [
+		{
+			"id": "1",
+			"name": "Juma Beatriz",
+			"emai": "jumamad@vitalvet.com",
+			"userName": "jumamad",
+			"password": "$2b$10$qm5BkeOk3l5ZKgtEB26zQeGe0Rhb/mqvQCVPpovLa3idk3WYOfMAy",
+			"role": "admin"
+		}
+	],
+	"owners": [
+		{
+			"id": "1",
+			"name": "João Silva",
+			"cpf": "12345678900",
+			"tel": "41999990001",
+			"email": "joao@email.com",
+			"address": "Rua das Flores, 123",
+			"createdAt": "2024-01-15T10:00:00.000Z"
+		},
+		{
+			"name": "Maria Freitas",
+			"cpf": "11345545912",
+			"tel": "41999991231",
+			"email": "maria@email.com",
+			"address": "Rua das Orquideas, 1011",
+			"createdAt": "2026-07-15T22:06:29.819Z",
+			"id": "xPwq_G2"
+		},
+		{
+			"name": "Manoel Junior",
+			"cpf": "33223947000",
+			"email": "manoeljuninhoepstein@gmail.com",
+			"address": "Rua do Epstein, 6969 - Ilha",
+			"createdAt": "2026-07-25T00:03:38.306Z",
+			"id": "S_5gPF1"
+		},
+		{
+			"name": "Carlos jose",
+			"cpf": "21141896001",
+			"tel": "12398190382",
+			"email": "juca@gmail.com",
+			"address": "Rua Vereador Joel Vicentin, 233 - Primavera",
+			"createdAt": "2026-07-25T00:06:18.137Z",
+			"id": "bBPYhPM"
+		}
+	],
+	"pets": [
+		{
+			"id": "1",
+			"name": "Rex",
+			"specie": "Cachorro",
+			"breed": "Labrador",
+			"age": 3,
+			"weight": 28.5,
+			"gen": "M",
+			"ownerId": "1"
+		},
+		{
+			"name": "Lurdinha",
+			"specie": "Gato",
+			"breed": "Sem Raça",
+			"age": 3,
+			"weight": 6,
+			"gen": "F",
+			"ownerId": "xPwq_G2",
+			"id": "i_AbpQP"
+		},
+		{
+			"name": "Tirivo",
+			"specie": "bird",
+			"breed": "Tiriva",
+			"age": "2",
+			"weight": "1",
+			"gen": "fem",
+			"spayed": "n-s",
+			"obs": "Uma tiriva bem humilde",
+			"ownerId": "1",
+			"id": "Nom3mRK"
+		}
+	],
+	"appointments": [
+		{
+			"idAnimal": "1",
+			"idDono": "1",
+			"dataHora": "2025-03-01T14:00:00.000Z",
+			"tipoExame": "Coleta",
+			"status": "realizado",
+			"observacoesIniciais": "Animal brabo",
+			"protocol": "1000",
+			"id": 1
+		},
+		{
+			"idAnimal": "1",
+			"idDono": "1",
+			"dataHora": "2025-03-01T14:00:00.000Z",
+			"tipoExame": "Coleta",
+			"status": "realizado",
+			"observacoesIniciais": "Animal brabo 2",
+			"protocol": "1001",
+			"id": 2,
+			"cancelReason": {
+				"cancelReason": "Dono viajou!"
+			}
+		},
+		{
+			"idAnimal": "1",
+			"idDono": "1",
+			"dataHora": "2025-03-01T14:00:00.000Z",
+			"tipoExame": "Coleta",
+			"status": "realizado",
+			"observacoesIniciais": "Animal brabo 2",
+			"protocol": "1002",
+			"id": 3,
+			"cancelReason": "Dono viajou!"
+		}
+	],
+	"exams": [
+		{
+			"id": "1",
+			"idAgendamento": "1",
+			"idAnimal": "1",
+			"idVeterinario": "vet-001",
+			"dataHoraInicio": "2024-02-01T14:05:00.000Z",
+			"dataHoraFim": "2024-02-01T14:30:00.000Z",
+			"resultado": "Todos os índices normais",
+			"observacoes": "Animal colaborativo durante coleta",
+			"status": "concluído"
+		}
+	],
+	"stocks": [
+		{
+			"id": "1",
+			"nomeMaterial": "Seringa 5ml",
+			"quantidadeAtual": 50,
+			"quantidadeMinima": 10,
+			"unidade": "unidade"
+		}
+	],
+	"stockMovements": [
+		{
+			"id": "1",
+			"idMaterial": "1",
+			"idExame": "1",
+			"tipo": "saída",
+			"quantidade": 2,
+			"motivo": "Coleta de sangue - Hemograma",
+			"data": "2024-02-01T14:05:00.000Z"
+		}
+	]
 }

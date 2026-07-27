@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							primary: "#005E82",
+							dark: "#12134F",
+							accent: "#7781E8",
+							light: "#81E8FF",
+							background: "#ECEEFF",
+						},
+					},
+				},
+			};
+		</script>
+		<link rel="stylesheet" href="../css/global.css" />
+	</head>
+
+	<body class="bg-background min-h-screen">
+		<main class="container mx-auto py-10 px-4">
+			<div class="flex justify-between items-center mb-6">
+				<div>
+					<h1 class="text-3xl font-bold text-dark">Pacientes</h1>
+					<p class="text-gray-600">Lista de pacientes cadastrados</p>
+				</div>
+
+				<button
+					class="bg-primary hover:bg-dark transition text-white font-semibold px-5 py-2.5 rounded-lg shadow"
+				>
+					+ Novo paciente
+				</button>
+			</div>
+
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+				<table class="w-full">
+					<thead class="bg-primary text-white">
+						<tr>
+							<th class="text-left px-6 py-4 font-semibold">Nome</th>
+							<th class="text-left px-6 py-4 font-semibold">Proprietário</th>
+							<th class="text-left px-6 py-4 font-semibold">Ultimo exame</th>
+							<th class="text-center px-6 py-4 font-semibold">Ações</th>
+						</tr>
+					</thead>
+
+					<tbody class="divide-y divide-gray-200"></tbody>
+				</table>
+			</div>
+
+			<!-- Modal -->
+			<div id="pet-modal" class="hidden">
+				<div
+					class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+				>
+					<!-- Card -->
+					<div
+						class="w-full max-w-4xl mx-4 rounded-2xl bg-white shadow-2xl overflow-hidden"
+					>
+						<!-- Header -->
+						<div class="flex items-center justify-between bg-primary px-6 py-4">
+							<h2 class="text-2xl font-bold text-white">Dados do Paciente</h2>
+							<button
+								id="close-modal"
+								class="text-white text-3xl hover:text-light transition"
+							>
+								&times;
+							</button>
+						</div>
+						<!-- Conteúdo -->
+						<div class="p-6 bg-background">
+							<div class="grid grid-cols-2 gap-5">
+								<div>
+									<p class="text-sm text-gray-500">Nome</p>
+									<p id="pet-name" class="text-lg font-semibold text-dark"></p>
+								</div>
+								<div>
+									<p class="text-sm text-gray-500">Proprietário</p>
+									<p id="owner-name" class="text-lg text-dark"></p>
+								</div>
+								<div>
+									<p class="text-sm text-gray-500">Telefone</p>
+									<p id="owner-phone" class="text-lg text-dark"></p>
+								</div>
+								<div class="">
+									<p class="text-sm text-gray-500">Endereço</p>
+									<p id="owner-address" class="text-lg text-dark"></p>
+								</div>
+							</div>
+							<hr class="my-6 border-gray-300" />
+							<!-- Informações extras -->
+							<div class="grid grid-cols-2 gap-5">
+								<div
+									class="bg-white rounded-xl shadow p-4 border-l-4 border-primary"
+								>
+									<p class="text-sm text-gray-500">Histórico</p>
+									<p
+										id="owner-pets"
+										class="text-3xl font-bold text-primary"
+									></p>
+								</div>
+								<div
+									class="bg-white rounded-xl shadow p-4 border-l-4 border-accent"
+								>
+									<p class="text-sm text-gray-500">Cadastro</p>
+									<p
+										id="owner-created"
+										class="text-lg font-semibold text-dark"
+									></p>
+								</div>
+							</div>
+						</div>
+						<!-- Footer -->
+						<div class="flex justify-end gap-3 bg-white px-6 py-4 border-t">
+							<button
+								id="edit-owner"
+								class="rounded-lg bg-accent px-5 py-2 font-semibold text-white transition hover:bg-light hover:text-dark"
+							>
+								Editar
+							</button>
+							<button
+								id="close-modal-footer"
+								class="rounded-lg bg-primary px-5 py-2 font-semibold text-white transition hover:bg-dark"
+							>
+								Fechar
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--  Bibliotecas externas -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+		<!--  Utilitários -->
+		<script src="../js/utils/api.js"></script>
+
+		<!-- Proteção de rota -->
+		<script src="../js/auth-guard.js"></script>
+
+		<!-- Script específico da página -->
+		<script src="../js/pet-list.js"></script>
+	</body>
+</html>
