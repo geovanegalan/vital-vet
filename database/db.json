@@ -3,7 +3,7 @@
 		{
 			"id": "1",
 			"name": "Juma Beatriz",
-			"emai": "jumamad@vitalvet.com",
+			"email": "jumamad@vitalvet.com",
 			"userName": "jumamad",
 			"password": "$2b$10$qm5BkeOk3l5ZKgtEB26zQeGe0Rhb/mqvQCVPpovLa3idk3WYOfMAy",
 			"role": "admin"
