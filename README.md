@@ -19,6 +19,10 @@ O VitalVet é um sistema para clínicas veterinárias gerenciarem o cadastro de 
 
 O objetivo de longo prazo é evoluir esse projeto até um nível que possa ser utilizado por uma clínica real.
 
+> ⚠️ **Observações:**
+> 1 - O frontend atual é propositalmente simples. O foco até aqui foi validar a lógica de comunicação entre frontend, backend e banco de dados, então o visual ainda não reflete o resultado final pretendido. Refinar a interface será uma das últimas etapas do projeto.
+> 2 - Um banco de dados a
+
 ---
 
 ## ✨ Funcionalidades
@@ -44,6 +48,9 @@ Construir esse projeto tem sido também um exercício de arquitetura de software
 - **Protocolo sequencial como identificador visível**: o ID interno de cada registro é um UUID gerado automaticamente, ilegível para humanos. Por isso, agendamentos possuem um número de protocolo sequencial (a partir de 1000), pensado para ser o identificador que o tutor e o atendente realmente usam no dia a dia.
 - **Cadastro de tutor e pet em etapas separadas**: em vez de um cadastro simultâneo, o tutor é cadastrado primeiro e o pet é vinculado a ele depois, buscando pelo CPF. Isso evita ambiguidade e é o padrão usado por sistemas de saúde reais.
 - **Senhas nunca armazenadas em texto puro**: uso da biblioteca bcrypt para gerar hash das senhas antes de qualquer gravação no banco.
+- **Banco de dados simulado com JSON Server**: por enquanto a persistência dos dados é feita com JSON Server, uma API fake que lê e escreve em um arquivo `db.json`. A escolha foi intencional para focar no aprendizado de backend, autenticação e regras de negócio antes de introduzir a complexidade de um banco de dados real. A migração para PostgreSQL/SQLite com Prisma já está mapeada no roadmap, e a arquitetura em camadas foi pensada justamente para que essa troca não exija alterar as rotas.
+
+> ⚠️ Como o projeto foi construído em etapas, alguns nomes de campos ainda misturam português e inglês (ex: alguns registros de teste no `db.json` criados manualmente antes de eu padronizar as interfaces). Isso será revisado e padronizado por completo durante a migração para o banco de dados definitivo.
 
 ---
 
@@ -171,7 +178,7 @@ vital-vet/
 - [ ] Migração do token de autenticação de localStorage para cookie httpOnly
 - [ ] Cache para reduzir requisições redundantes
 - [ ] Cadastro de pessoa jurídica (CNPJ)
-- [ ] Responsividade completa do frontend
+- [ ] Reformulação e responsividade do front-end
 - [ ] Busca de pets e tutores por nome
 
 ---
