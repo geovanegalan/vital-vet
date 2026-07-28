@@ -19,7 +19,7 @@ document.getElementById("search-owner").addEventListener("click", async (e) => {
 		ownerTelMask.value = data.tel;
 	} catch (error) {
 		console.error(error);
-		throw Error;
+		throw error;
 	}
 });
 
@@ -41,13 +41,13 @@ form.addEventListener("submit", async (e) => {
 		}
 
 		const newPet = {
-			petName: document.getElementById("pet-name").value,
-			petSpecie: document.getElementById("specie").value,
-			petBreed: document.getElementById("breed").value,
-			petAge: document.getElementById("age").value,
-			petWeight: document.getElementById("weight").value,
-			petGenre: document.getElementById("genre").value,
-			petSpayed: document.getElementById("spayed").value,
+			name: document.getElementById("pet-name").value,
+			specie: document.getElementById("specie").value,
+			breed: document.getElementById("breed").value,
+			age: document.getElementById("age").value,
+			weight: document.getElementById("weight").value,
+			gen: document.getElementById("genre").value,
+			spayed: document.getElementById("spayed").value,
 			obs: document.getElementById("observations").value,
 			ownerId: ownerID,
 		};
