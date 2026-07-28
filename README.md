@@ -21,7 +21,6 @@ O objetivo de longo prazo é evoluir esse projeto até um nível que possa ser u
 
 > ⚠️ **Observações:**
 > 1 - O frontend atual é propositalmente simples. O foco até aqui foi validar a lógica de comunicação entre frontend, backend e banco de dados, então o visual ainda não reflete o resultado final pretendido. Refinar a interface será uma das últimas etapas do projeto.
-> 2 - Um banco de dados a
 
 ---
 
